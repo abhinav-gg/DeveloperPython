@@ -32,27 +32,31 @@ def print_triangle(height):
 
 has_quit = False
 while not has_quit:
-    choice = input("""Enter a number to choose:
-    1) Square
-    2) Rectangle
-    3) Circle
-    4) Triangle
-    5) Quit
-    """)
-    if choice == "1":
-        side_length = int(input("Enter side length: "))
-        print_square(side_length)
-    elif choice == "2":
-        width = int(input("Enter width: "))
-        height = int(input("Enter height: "))
-        print_rectangle(width, height)
-    elif choice == "3":
-        radius = int(input("Enter radius: "))
-        print_circle(radius)
-    elif choice == "4":
-        height = int(input("Enter height: "))
-        print_triangle(height)
-    elif choice == "5":
-        has_quit = True
-    else:
-        print("Invalid choice")
+    valid_choice = False
+    while not valid_choice:
+        choice = input("""Enter a number to choose:
+        1) Square
+        2) Rectangle
+        3) Circle
+        4) Triangle
+        5) Quit
+        """)
+        valid_choice = True
+        if choice == "1":
+            side_length = int(input("Enter side length: "))
+            print_square(side_length)
+        elif choice == "2":
+            width = int(input("Enter width: "))
+            height = int(input("Enter height: "))
+            print_rectangle(width, height)
+        elif choice == "3":
+            radius = int(input("Enter radius: "))
+            print_circle(radius)
+        elif choice == "4":
+            height = int(input("Enter height: "))
+            print_triangle(height)
+        elif choice == "5":
+            has_quit = True
+        else:
+            print("Invalid choice")
+            valid_choice = False

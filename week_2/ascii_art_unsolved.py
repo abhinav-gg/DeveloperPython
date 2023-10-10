@@ -2,13 +2,14 @@ import math
 
 UNIT = "#"
 
-def get_distance(point_1, point_2):
+def get_distance(point_1, point_2): # HINT: This function can be used to help with the circle printing.
     x1, y1 = point_1
     x2, y2 = point_2
     return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
 def print_square(side_length):
-    for _ in range(side_length):
+    # ===> Challenge 1: Fix the square printing so it is even.
+    for _ in range(side_length + 1):
         print(UNIT * side_length)
 
 def print_rectangle(width, height):
@@ -16,7 +17,7 @@ def print_rectangle(width, height):
         print(UNIT * width)
 
 def print_circle(radius):
-    # ====> EXTENSION: make the circle printing work.
+    # ===> EXTENSION: make the circle printing work.
     for y in range(2 * radius + 1):
         for x in range(2 * radius + 1):
             print(UNIT, end="")
@@ -29,7 +30,7 @@ def print_triangle(height):
         print()
 
 has_quit = False
-# ===> Make it so the user can quit the program by entering "5"
+# ===> Challenge 3: Make it so the user can quit the program by entering "5".
 while True:
     choice = input("""Enter a number to choose:
     1) Square
@@ -44,7 +45,7 @@ while True:
     elif choice == "2":
         width = int(input("Enter width: "))
         height = int(input("Enter height: "))
-        # ===> Fix the orientation of the rectangle
+        # ===> Challenge 2: Fix the orientation of the rectangle
         print_rectangle(height, width)
     elif choice == "3":
         radius = int(input("Enter radius: "))
@@ -54,5 +55,4 @@ while True:
         print_triangle(height)
     elif choice == "5":
         has_quit = True
-    else:
-        print("Invalid choice")
+    # ===> Challenge 4: Tell the player if they entered an invalid choice.

@@ -1,4 +1,6 @@
-CONNECT = 4
+CONNECT = 4 # You can change this value to change 
+            # the number of counters that need to be connected to win
+
 board = [[" ", " ", " ", " ", " ", " ", " "] for i in range(6)]
 
 def printBoard(board):
@@ -25,7 +27,10 @@ def checkWin(row):
 def RunGame():
     # Run the game
     players = ["R", "Y"]
-    player = 0
+    player = 0 
+    # the player alternates from 0 to 1
+
+
     while True:
         printBoard(board)
         print("Player " + players[player] + "'s turn")
@@ -54,14 +59,16 @@ def RunGame():
         
         posDiagonal = [board[row][column]]
         negDiagonal = [board[row][column]]
-        for i in range(5):
+        for i in range(1): # This is the number of diagonals to check 
+
+            # TASK 3) make this loop continue for longer so it checks the entire board.
+
             if i == 0: 
                 continue
             if (row + i <= 5) and (column + i <= 6):
                 posDiagonal.append(board[row + i][column + i])
             if (row - i >= 0) and (column - i >= 0):
                 posDiagonal.insert(0, board[row - i][column - i])
-
             if (row + i <= 5) and (column - i >= 0):
                 negDiagonal.append(board[row + i][column - i])
             if (row - i >= 0) and (column + i <= 6):
@@ -73,16 +80,16 @@ def RunGame():
                checkWin(board[row]),
                checkWin([row[column] for row in board])]):
             
-            printBoard(board)
-            print("Player " + players[player] + " wins!")
+            # Task 2) print the board and the winner (hint: the winner is the player variable)
             return
         
         elif (sum([row.count(" ") for row in board]) == 0):
-            printBoard(board)
-            print("Draw!")
+            
+            # Task 3) print the board and let the user know there are no more blank squares
+
             return
-        
+
         player = (player + 1) % 2
 
 
-RunGame()
+RunGame() # Uncomment this line to run the game!!

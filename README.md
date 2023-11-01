@@ -14,7 +14,7 @@ Each new week is stored in its own branch on this repo to make it easy to manage
 - Week 2: Sahil -> Memory Game
 - Week 3: Team2 -> Brainstorm
 - Week 4: Oliver -> ASCII shapes
-- Week 5: Team2 -> ?
+- Week 5: Team2 -> Halloween Hangman
 - Week 6: Abhinav -> Connect Four
 - Week 7: Team2 -> ?
 

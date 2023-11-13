@@ -8,7 +8,7 @@ def printBoard(board):
 
 def checkWin(row):
 
-    # given a list [] find any four repeating characters
+    # given a list row[] find any four repeating characters
     connected = 0
     connection = ""
     for i in row:

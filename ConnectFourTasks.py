@@ -19,7 +19,7 @@ def checkWin(row):
             connected = 1
             connection = i
         if connected == 7 and connection != " ":
-            # TASK 1) change the 7 to a constant defined above so we can change the game size
+            # TASK 1) change the 7 to a constant defined above
             return True
     return False
 

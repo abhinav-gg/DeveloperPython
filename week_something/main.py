@@ -9,6 +9,7 @@ import ascii_art
 # To display an ascii art image, use 'ascii_art.display(ascii)
 
 # Challenge 3: Change the link to https://smartcdn.gprod.postmedia.digital/theprovince/wp-content/uploads/2015/11/astley.jpg?quality=90&strip=all&w=1128&h=846&type=webp&sig=4XdRb19ieybMbo1MaMqXiA
+# Hint: use copy and paste
 LINK = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngA3sDiSoA46Dy56OLZjLKD1SqgsS3Qmh1A&usqp=CAU"
 
 image = ascii_art.get_image(link=LINK)
